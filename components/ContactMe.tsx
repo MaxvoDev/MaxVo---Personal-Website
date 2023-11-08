@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 
 const ContactMeModal = () => {
     const {isOpen, onClose} = useContactMeModal();
-    const form = useRef();
     const onChange = (open: boolean) => {
         if(!open){
             onClose();
