@@ -1,7 +1,6 @@
 import Modal from "./Modal";
 import useContactMeModal from "@/hooks/useContactMeModal";
 import emailjs from '@emailjs/browser';
-import { useRef } from "react";
 
 const ContactMeModal = () => {
     const {isOpen, onClose} = useContactMeModal();
@@ -15,7 +14,7 @@ const ContactMeModal = () => {
     const sendEmail = (e: any) => {
         e.preventDefault();
         alert(1);
-        emailjs.sendForm('service_uiskozm', 'template_hjg6i5a', form.current, 'BPOdAfZ6eYVHV-bBk')
+        emailjs.sendForm('service_uiskozm', 'template_hjg6i5a', "test", 'BPOdAfZ6eYVHV-bBk')
         .then((result: any) => {
             console.log(result.text);
         }, (error: any) => {
@@ -30,7 +29,7 @@ const ContactMeModal = () => {
             title="Contact Me"
         >
             <div className="px-10 py-5 flex flex-col h-full">
-                <form ref={form} onSubmit={sendEmail} className="h-full flex flex-col">
+                <form onSubmit={sendEmail} className="h-full flex flex-col">
                     <div className="grid grid-cols-12">
                         <label className="col-span-3 text-xl text-[#0f0]" htmlFor="">From: </label>
                         <input className="col-span-9 p-3" name="user.email" type="text" placeholder="Enter your email address here"/>
