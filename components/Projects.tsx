@@ -64,7 +64,7 @@ const ProjectsModal = () => {
                 {
                     projectID === -1 ? 
                     projectList.map((item, index) => (
-                        <div onClick={() => setProjectID(index)} className="p-5 bg-sky-900/50 hover:bg-sky-900/75 hover:cursor-pointer rounded-lg">
+                        <div key={index} onClick={() => setProjectID(index)} className="p-5 bg-sky-900/50 hover:bg-sky-900/75 hover:cursor-pointer rounded-lg">
                             <p className="text-[#0f0]">{item.position}</p>
                             <p>{item.time}</p>
                             <p>{item.shortDesc}</p>
