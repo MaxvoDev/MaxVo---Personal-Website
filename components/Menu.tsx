@@ -6,7 +6,7 @@ import {twMerge} from "tailwind-merge";
 interface MenuProps {
     showIcon?: boolean;
     name: string;
-    image: string;
+    image?: string;
     onClick?: () => void;
     className?: string;
     isActive?: boolean;
@@ -20,6 +20,9 @@ const Menu: React.FC<MenuProps> = ({
     className,
     isActive = false
 }) => {
+    const production = true;
+    const basePath = production ? '/porfolio' : '';
+
     return (
         <div className={twMerge(`
         `,
@@ -34,8 +37,8 @@ const Menu: React.FC<MenuProps> = ({
                     <span>/{name}</span>
                 }
                 {
-                    showIcon && 
-                    <Image src={image} alt='test' width={50} height={50}></Image>
+                    showIcon && image &&
+                    <Image src={basePath + image} alt='test' width={50} height={50}></Image>
                 }
             </button>
         </div>

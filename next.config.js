@@ -1,3 +1,5 @@
+const production = true;
+
 // @ts-check
 
 /**
@@ -16,7 +18,7 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
      */
-    basePath: "/porfolio",
+    basePath: production ? "/porfolio" : '',
   
     /**
      * Disable server-based image optimization. Next.js does not support
@@ -27,6 +29,7 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
+
   };
   
   module.exports = nextConfig;

@@ -10,7 +10,9 @@ import useContactMeModal from "@/hooks/useContactMeModal";
 import useProjectsModal from "@/hooks/useProjectsModal";
 import {AiFillLinkedin} from "react-icons/ai";
 
+
 const HomeComponent = () => {
+    
     const cvModal = useCvModal();
     const socialModal = useSocialModal();
     const websiteModal = useWebsiteModal();
@@ -31,13 +33,13 @@ const HomeComponent = () => {
                 <p><span className='text-green-300'>$</span> Welcome to my world</p>
                 {/* <p><span className='text-green-300'>$</span> Open my terminal to learn more here</p> */}
                 <div className="w-full grid grid-cols-12 text-sky-300 mt-5 gap-y-[20px]">
-                    <Menu className="col-span-6" onClick={userModal.onOpen} name="About" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={cvModal.onOpen} name="Resume" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={projectsModal.onOpen} name="Projects" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={skillsModal.onOpen} name="Skills" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={socialModal.onOpen} name="Socials" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={websiteModal.onOpen} name="Website" image="/images/user-icon.png"></Menu>
-                    <Menu className="col-span-6" onClick={contactmeModal.onOpen} name="Contact" image="/images/user-icon.png"></Menu>
+                    <Menu className="col-span-6" onClick={userModal.onOpen} name="About"></Menu>
+                    <Menu className="col-span-6" onClick={cvModal.onOpen} name="Resume"></Menu>
+                    <Menu className="col-span-6" onClick={projectsModal.onOpen} name="Projects"></Menu>
+                    <Menu className="col-span-6" onClick={skillsModal.onOpen} name="Skills"></Menu>
+                    <Menu className="col-span-6" onClick={socialModal.onOpen} name="Socials"></Menu>
+                    <Menu className="col-span-6" onClick={websiteModal.onOpen} name="Website"></Menu>
+                    <Menu className="col-span-6" onClick={contactmeModal.onOpen} name="Contact"></Menu>
                 </div>
             </div>
             <div className="flex fixed bottom-[0] left-[0] h-[70px] w-full gap-x-[10px] items-center justify-center bg-blue-500/[0.03] border-t border-black/[0.3]">

@@ -24,8 +24,10 @@ const Modal: React.FC<ModalProps> = ({
     title,
     children
 }) => {
+    const production = true;
+    const basePath = production ? '/porfolio' : '';
     const [isMaximized, setIsMaximized] = useState(false);
-
+    
     return (
         <Dialog.Root
             open={isOpen}
@@ -50,7 +52,7 @@ const Modal: React.FC<ModalProps> = ({
                     isMaximized ? 'w-full' : 'w-[70%]'
                 )}>
                     <Dialog.Title className="flex items-center px-5 h-[50px] bg-[rgb(71,85,105)]">
-                        <Image className="mr-2" src={icon} alt="Icon" width={50} height={50}></Image>
+                        <Image className="mr-2" src={basePath + icon} alt="Icon" width={50} height={50}></Image>
                         <h3>{title}</h3>
                     </Dialog.Title>
                     
