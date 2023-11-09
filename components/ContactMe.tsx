@@ -28,23 +28,23 @@ const ContactMeModal = () => {
             icon="/images/contact-icon.png"
             title="Contact Me"
         >
-            <div className="px-10 py-5 flex flex-col h-full">
+            <div className="px-3 md:px-10 py-5 flex flex-col h-full">
                 <form onSubmit={sendEmail} className="h-full flex flex-col">
                     <div className="grid grid-cols-12">
-                        <label className="col-span-3 md:text-xl text-[#0f0]" htmlFor="">From: </label>
-                        <input className="col-span-9 p-3" name="user.email" type="text" placeholder="Enter your email address here"/>
+                        <label className="col-span-2 md:text-xl text-[#0f0]" htmlFor="">From: </label>
+                        <input className="col-span-10 p-3 text-black bg-slate-300 outline-none border-2 border-b-green-500 rounded" name="user.email" type="text" placeholder="Enter your email address here"/>
                     </div>
                     <div className="grid grid-cols-12 mt-2">
-                        <label className="col-span-3 md:text-xl text-[#0f0]" htmlFor="">Name: </label>
-                        <input className="col-span-9 p-3" name="user.name" type="text" placeholder="Enter your name"/>
+                        <label className="col-span-2 md:text-xl text-[#0f0]" htmlFor="">Name: </label>
+                        <input className="col-span-10 p-3 text-black bg-slate-300 outline-none border-2 border-b-green-500 rounded" name="user.name" type="text" placeholder="Enter your name"/>
                     </div>
                     <div className="grid grid-cols-12 mt-2">
-                        <label className="col-span-3 md:text-xl text-[#0f0]" htmlFor="">Subject: </label>
-                        <input className="col-span-9 p-3" name="user.title" type="text" placeholder="Subject of the email"/>
+                        <label className="col-span-2 md:text-xl text-[#0f0]" htmlFor="">Subject: </label>
+                        <input className="col-span-10 p-3 text-black bg-slate-300 outline-none border-2 border-b-green-500 rounded" name="user.title" type="text" placeholder="Subject of the email"/>
                     </div>
                     <div className="grid grid-cols-12 grow mt-2">
-                        <label className="col-span-3 md:text-xl text-[#0f0]" htmlFor="">Message: </label>
-                        <textarea className="col-span-9 p-3" name="user.message" placeholder="Email message"/>
+                        <label className="col-span-2 md:text-xl text-[#0f0]" htmlFor="">Message: </label>
+                        <textarea className="col-span-10 p-3 text-black bg-slate-300 outline-none border-2 border-b-green-500 rounded" name="user.message" placeholder="Email message"/>
                     </div>
                     <div className="flex items-center justify-center mt-5 ">
                         <button className="w-[70%] py-5 bg-blue-500/75 ">Send</button>
