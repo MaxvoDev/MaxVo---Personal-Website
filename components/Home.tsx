@@ -52,7 +52,7 @@ const HomeComponent = () => {
                 <Menu showIcon={true} isActive={cvModal.isOpen} onClick={cvModal.onOpen} name="Website" image="/images/resume-icon.png"></Menu>
                 <Menu showIcon={true} isActive={projectsModal.isOpen} onClick={projectsModal.onOpen} name="Contact" image="/images/projects-icon.png"></Menu>
                 <Menu showIcon={true} isActive={skillsModal.isOpen} onClick={skillsModal.onOpen} name="Skills" image="/images/skills-icon.png"></Menu>
-                <a className="hover:bg-[rgb(71,85,105)]" target="_blank" href="https://www.linkedin.com/in/max-vo/">
+                <a className="flex items-center justify-center hover:bg-[rgb(71,85,105)]" target="_blank" href="https://www.linkedin.com/in/max-vo/">
                     <AiFillLinkedin width={50} height={50}></AiFillLinkedin>
                 </a>
                 <Menu showIcon={true} isActive={websiteModal.isOpen} onClick={websiteModal.onOpen} name="Website" image="/images/website-icon.png"></Menu>

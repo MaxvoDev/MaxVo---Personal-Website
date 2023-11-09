@@ -29,7 +29,7 @@ const ContactMeModal = () => {
             title="Contact Me"
         >
             <div className="px-3 md:px-10 py-5 flex flex-col h-full">
-                <form onSubmit={sendEmail} className="h-full flex flex-col">
+                <form onSubmit={sendEmail} className="h-full flex flex-col items-center justify-center">
                     <div className="grid grid-cols-12">
                         <label className="col-span-4 md:col-span-2 md:text-xl text-[#0f0]" htmlFor="">From: </label>
                         <input className="col-span-8 md:md:col-span-10 p-3 text-black bg-slate-300 outline-none border-2 border-b-green-500 rounded" name="user.email" type="text" placeholder="Enter your email address here"/>
