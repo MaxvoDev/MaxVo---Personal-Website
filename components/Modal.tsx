@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({
     title,
     children
 }) => {
-    const [isMaximized, setIsMaximized] = useState(false);
+    const [isMaximized, setIsMaximized] = useState(true);
     
     return (
         <Dialog.Root
@@ -65,11 +65,11 @@ const Modal: React.FC<ModalProps> = ({
                     >
                         {
                             isMaximized ?
-                            <button onClick={() => setIsMaximized(false)} className="flex items-center justify-center h-[50px] px-5 hover:bg-[red]">
+                            <button onClick={() => setIsMaximized(false)} className="invisible md:visible  flex items-center justify-center h-[50px] px-5 hover:bg-[red]">
                                 <CiMinimize1></CiMinimize1>
                             </button>
                             :
-                            <button onClick={() => setIsMaximized(true)} className="flex items-center justify-center h-[50px] px-5 hover:bg-[red]">
+                            <button onClick={() => setIsMaximized(true)} className="invisible md:visible   items-center justify-center h-[50px] px-5 hover:bg-[red]">
                                 <FiMaximize></FiMaximize>
                             </button>
                         }

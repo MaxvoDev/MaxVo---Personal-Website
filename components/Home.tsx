@@ -44,9 +44,9 @@ const HomeComponent = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex h-[70px] w-full gap-x-5 items-center justify-center bg-blue-500/[0.03] border-t border-black/[0.3]">
+            <div className="p-3 flex h-[70px] w-full gap-x-3 items-center justify-center bg-blue-500/[0.03] border-t border-black/[0.3]">
                 <Menu showIcon={true} name="About" image="/images/start-icon.png"></Menu>
-                <Menu showIcon={true} name="Projects" image="/images/folder-icon.png"></Menu>
+                {/* <Menu showIcon={true} name="Projects" image="/images/folder-icon.png"></Menu> */}
                 {/* <Menu showIcon={true} onClick={cvModal.onOpen} name="Skills" image="/images/terminal-start-icon.png"></Menu> */}
                 <Menu showIcon={true} isActive={userModal.isOpen} onClick={userModal.onOpen} name="Socials" image="/images/user-icon.png"></Menu>
                 <Menu showIcon={true} isActive={cvModal.isOpen} onClick={cvModal.onOpen} name="Website" image="/images/resume-icon.png"></Menu>
