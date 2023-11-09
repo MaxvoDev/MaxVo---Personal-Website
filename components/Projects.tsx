@@ -16,7 +16,7 @@ const ProjectsModal = () => {
     const projectList = [
         {
             position: 'Public Safety Management (PSM)',
-            time: 'Sep 2023 - Nov 2023',
+            time: 'Dec 2021 - May 2023',
             shortDesc: 'A solution for CrimeStoppers and future tenants to modernise crime reporting and processing online in the cloud.',
             fullDesc: {
                 role: 'Co-developer, full stack',
@@ -31,7 +31,7 @@ const ProjectsModal = () => {
         },
         {
             position: 'NOCC Notification App + Rework',
-            time: 'Sep 2023 - Nov 2023',
+            time: 'Nov 2017 - Jan 2018',
             shortDesc: 'A legacy application written in Winforms + VBA which I eventually re-wrote and modernised',
             fullDesc: {
                 role: 'Legacy app support, sole developer of the re-worked solution',
@@ -48,7 +48,7 @@ const ProjectsModal = () => {
         },
         {
             position: 'Sierra Wireless Airlink Manager',
-            time: 'Sep 2023 - Nov 2023',
+            time: 'Jan 2017 - Sep 2017',
             shortDesc: 'A fullstack solution to configure and apply configurations to routers seamlessly using csv documents.',
             fullDesc: {
                 role: 'Sole developer',
