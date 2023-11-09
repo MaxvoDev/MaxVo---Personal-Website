@@ -4,49 +4,66 @@ import {useState} from "react";
 import {AiFillBackward} from "react-icons/ai";
 
 const ProjectsModal = () => {
+    const [projectID, setProjectID] = useState(-1);
     const {isOpen, onClose} = useProjectsModal();
     const onChange = (open: boolean) => {
         if(!open){
+            setProjectID(-1);
             onClose();
         }
     }
 
     const projectList = [
         {
-            position: 'Open AI/Langchain/Pinecone Journey builder',
+            position: 'Public Safety Management (PSM)',
             time: 'Sep 2023 - Nov 2023',
-            shortDesc: 'A POC developed at preezie to implement Generative AI in our solution',
+            shortDesc: 'A solution for CrimeStoppers Tasmania and future tenants to modernise crime reporting and processing online in the cloud.',
             fullDesc: {
-                role: 'Main developer - Backend',
-                achievement: `- Implemented newly researched industry standard Generative AI techniques.
-                - Working closely with our Microsoft partnership to gain insight on AI development.
-                - Learned from scratch prompt engineering techniques using tutorials
-                - Successfully refined my work & delivering in a timely scoped manner.`,
-                description: `CEO of preezie wanted an AI POC of our product to demonstrate to investors for a potential series B raise and investment in the future of AI in Australian businesses.
-                A small team of developers worked closely with the head of technology to scope out requirements and develop a MVP within a couple months.
-                I implemented vector search using Open AI embeddings and Pinecone DB to store our data for the POC. We built a self-serve Journey quiz builder which eliminates the need for manual customer success related work.
-                Used Open AI GPT-3.5-turbo-16k and GPT-4 APIs to demonstrate the capability of generative AI for our solution. A Node.Js solution was developed with a ts.ED web api backend, react frontend, PostgreSQL database, Pinecone DB, Open AI APIs & Langchain.`
+                role: 'Co-developer, full stack',
+                achievement: `- Released a full stack solution for CrimeStoppers Tasmania's website, a major client under Motorola.\n- Achieved media press recognition.\n- Set up the whole cloud infrastructure, CI/CD Pipelines & Devops for the major project.\n- Did a lot of work on both the frontend and backend with another team member.\n- Re-worked the Identity Server solution for the project.`,
+                description: `Public Safety Management was a multi-part solution and major project I played a part in for our sponsored client at Motorola.\n
+                The publicly accessible website was a simple, mobile friendly web application allowing the general public to report crimes anonymously to management. You could also upload media files which I implemented the functionality for using Azure Blob Storage and utilisation of various cloud features.\n
+                The management portal is a complex web application backed by an identity server and separate admin portal for registering users, sending confirmation emails/password resets and assigning roles/permissions.\n
+                The management portal also had an audit trail API running as a microservice to log out every action taken by a user for a report to ensure auditability. Other features included was the encoding and streaming/downloading of media files.\n
+                Furthermore, statistics based on months or years was included to show various types of information for reports such as fequency of reporting dates, report type ratios and many more which were displayed using the user-friendly charting framework ngx-charts.\n
+                The whole solution was developed using Angular 13, .NET 6, MongoDB, SQL Server (for identity), MJML for emails and the Azure cloud to host our solution.`
             }
         },
         {
-            position: 'a',
+            position: 'NOCC Notification App + Rework',
             time: 'Sep 2023 - Nov 2023',
-            shortDesc: 'A POC developed at preezie to implement Generative AI in our solution',
+            shortDesc: 'A legacy application written in Winforms + VBA which I eventually re-wrote and modernised',
             fullDesc: {
-                role: 'Main developer - Backend',
-                achievement: `- Implemented newly researched industry standard Generative AI techniques.
-                - Working closely with our Microsoft partnership to gain insight on AI development.
-                - Learned from scratch prompt engineering techniques using tutorials
-                - Successfully refined my work & delivering in a timely scoped manner.`,
-                description: `CEO of preezie wanted an AI POC of our product to demonstrate to investors for a potential series B raise and investment in the future of AI in Australian businesses.
-                A small team of developers worked closely with the head of technology to scope out requirements and develop a MVP within a couple months.
-                I implemented vector search using Open AI embeddings and Pinecone DB to store our data for the POC. We built a self-serve Journey quiz builder which eliminates the need for manual customer success related work.
-                Used Open AI GPT-3.5-turbo-16k and GPT-4 APIs to demonstrate the capability of generative AI for our solution. A Node.Js solution was developed with a ts.ED web api backend, react frontend, PostgreSQL database, Pinecone DB, Open AI APIs & Langchain.`
+                role: 'Legacy app support, sole developer of the re-worked solution',
+                achievement: `- Supported an existing solution developed in-house after a lead developer resigned.
+                - Did not know Visual Basic & Winforms. Learned it on the job while supporting.
+                - Praised for my hard work numerous times by the Network Operations Control Centre (NOCC) team.
+                - Promised to re-work the solution before I resigned. Achieved a reworked modernised solution within a month.`,
+                description: `The NOCC Notification App was an internal tool developed by an ex-Motorola employee that allowed our NOCC team to send out emails to customers in cases of outages to our networks.\n
+                I was tasked to support the application and did so for many months. It was clunky, poorly designed and used an old framework. There was a lot of manual supporting I had to do such as small modifications to email templates would have to be requested to me before they were done.\n
+                I wanted to streamline the process and allow the NOCC to be able to modify distribution lists, create their own templates and send out emails more efficiently. I came up with a proof of concept and design for a re-worked version of the application shortly later.\n
+                Some of the tech I used included (but not limited to) Angular 13, .NET 6, MJML for the email templates, MongoDB to store our data, Google OAuth (made it so you could only sign in using motorola internal emails for security) and finally, a vast permission based system for each user.\n
+                The app also talks to an SMTP server hosted on premises and another service which fetched data for incidents and incident management. I had versioned the application too and released numerous bugfixes and features before leaving Motorola. I was praised for the work I did to help the team out vastly and eventually get rid of the legacy software.`
+            }
+        },
+        {
+            position: 'Motorola SWAM (Sierra Wireless Airlink Manager)',
+            time: 'Sep 2023 - Nov 2023',
+            shortDesc: 'A fullstack solution to configure and apply configurations to routers seamlessly using csv documents.',
+            fullDesc: {
+                role: 'Sole developer',
+                achievement: `- First full stack internal application developed for Motorola Solutions.
+                - Re-worked the application months later and improved efficiency and speed of the API vastly.
+                - Removed the need to manually configure each router with its configuration files. Seamlessly applying configurations to routers using only 1 csv file saved a ton of time.`,
+                description: `Motorola SWAM was an internal tool I developed for Motorola Solutions to make the process of applying configurations to a router seamless instead of manually applying each file to a router.\n
+                I cannot talk much about it due to it being an internal tool but it was a full stack application developed using SQL Server, .NET 5 Web API & Angular 12. It was hosted on-premises at the end and available only on our internal network.\n
+                It grabs a tar.gz zipped file and unzips it, reads variables prefixed with dollar signs ($) and uses that baseline configuration to replace those variables when a user uploads a csv file with the variables in the header cells. The user gets to select which baseline configuration file to use and what version they can then download later once applying a configuration.\n
+                This made the process of applying 1 configuration to each router manually much more smoother. A user can have hundreds of configurations in a csv file separated by rows and the application would create those hundreds on the fly for you to download later.`
             }
         }
     ];
 
-    const [projectID, setProjectID] = useState(-1);
+    
 
     return (
         <Modal isOpen={isOpen}
@@ -75,9 +92,9 @@ const ProjectsModal = () => {
                         <p className="text-[#0f0]">Role: </p>
                         <p>{projectList[projectID].fullDesc.role}</p>
                         <p className="text-[#0f0] mt-3">Achievements:</p>
-                        <p>{projectList[projectID].fullDesc.achievement}</p>
+                        <p className="whitespace-pre-line">{projectList[projectID].fullDesc.achievement}</p>
                         <p className="text-[#0f0] mt-3">Description:</p>
-                        <p>{projectList[projectID].fullDesc.description}</p>
+                        <p className="whitespace-pre-line">{projectList[projectID].fullDesc.description}</p>
                     </div>
                 }
             </div>

@@ -20,9 +20,6 @@ const Menu: React.FC<MenuProps> = ({
     className,
     isActive = false
 }) => {
-    const production = true;
-    const basePath = production ? '/porfolio' : '';
-
     return (
         <div className={twMerge(`
         `,
@@ -38,7 +35,7 @@ const Menu: React.FC<MenuProps> = ({
                 }
                 {
                     showIcon && image &&
-                    <Image src={basePath + image} alt='test' width={50} height={50}></Image>
+                    <Image src={image} alt='test' width={50} height={50}></Image>
                 }
             </button>
         </div>
