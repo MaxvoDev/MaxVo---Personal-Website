@@ -44,7 +44,6 @@ const Modal: React.FC<ModalProps> = ({
                     transition
                     flex
                     flex-col
-
                 `,
                     isMaximized ? 'w-full' : 'w-[70%]'
                 )}>
