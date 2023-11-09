@@ -28,7 +28,6 @@ const WebsiteModal = () => {
     - TailwindCSS<br/>
     - Git<br/>
     - Google Firebase to host my static files<br/>
-    - D3vd Meme_Api for terminal memes. Credit: here<br/>
     - LaTeX (to create my resume)<br/>
     - latexonline.cc API (to compile my resume)<br/>
     - EmailJS for sending emails to myself<br/>
