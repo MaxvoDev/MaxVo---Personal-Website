@@ -38,7 +38,11 @@ const HomeComponent = () => {
                         <Menu className="col-span-6" onClick={cvModal.onOpen} name="Resume"></Menu>
                         <Menu className="col-span-6" onClick={projectsModal.onOpen} name="Projects"></Menu>
                         <Menu className="col-span-6" onClick={skillsModal.onOpen} name="Skills"></Menu>
-                        <Menu className="col-span-6" onClick={socialModal.onOpen} name="Socials"></Menu>
+                        <div className="col-span-6">
+                            <a className="hover:bg-[rgb(71,85,105)]" target="_blank" href="https://www.linkedin.com/in/max-vo/">
+                                /LinkedIn
+                            </a>
+                        </div>
                         <Menu className="col-span-6" onClick={websiteModal.onOpen} name="Website"></Menu>
                         <Menu className="col-span-6" onClick={contactmeModal.onOpen} name="Contact"></Menu>
                     </div>
