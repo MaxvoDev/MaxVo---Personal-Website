@@ -31,11 +31,11 @@ const HomeComponent = () => {
     return (
         <div className='text-[#0f0] bg-zinc-900 w-full h-full flex flex-col items-center justify-center md:text-3xl'>
             <div className="grow flex flex-col items-center justify-center">
-                <h1 className='mb-2 w-full font-bold text-left md:text-6xl flex items-center'>
+                <div className='mb-2 w-full font-bold text-left md:text-6xl flex items-center'>
                     <span className='text-[rgb(159,18,57)]'>root</span>
                     @Max_Vo:~$
                     <CursorBlinker className="ml-1 h-full w-[10px] bg-[#0f0]"></CursorBlinker>
-                </h1>
+                </div>
                 {
                     showFull ?
                     <div className='text-left flex flex-col gap-y-1 text-xl'>

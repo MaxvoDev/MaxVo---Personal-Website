@@ -61,9 +61,9 @@ export default function TextAnim() {
 
   return (
     <div className="min-w-[33rem]">
-      <p className="flex items-center  gap-x-2"><motion.span>{displayText1}</motion.span><CursorBlinker className={ finish1 ? 'hidden' : '' }/></p>
-      { finish1 && <p className="flex items-center  gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText2}</motion.span><CursorBlinker className={ finish2 ? 'hidden' : '' }/></p> }
-      { finish2 && <p className="flex items-center gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText3}</motion.span><CursorBlinker className={ finish3 ? 'hidden' : '' }/></p> }
+      <div className="flex items-center  gap-x-2"><motion.span>{displayText1}</motion.span><CursorBlinker className={ finish1 ? 'hidden' : '' }/></div>
+      { finish1 && <div className="flex items-center  gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText2}</motion.span><CursorBlinker className={ finish2 ? 'hidden' : '' }/></div> }
+      { finish2 && <div className="flex items-center gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText3}</motion.span><CursorBlinker className={ finish3 ? 'hidden' : '' }/></div> }
     </div>
   );
 }
