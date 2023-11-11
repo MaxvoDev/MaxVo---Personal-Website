@@ -12,7 +12,7 @@ export default function TextAnim() {
 
   const { isFinished, onFinished } = useAnimationText();
 
-  const text1 = `\[._.]/ Hey there I'm Max Vo`;
+  const text1 = `\\[._.]/ Hey there I'm Max Vo`;
   const text2 = `A "Full Stack" Engineer`;
   const text3 = `Welcome to my world`;
   const count1 = useMotionValue(0);
@@ -60,10 +60,10 @@ export default function TextAnim() {
   }, []);
 
   return (
-    <div className="min-w-[22rem] sm:min-w-[33rem]">
+    <div className="min-w-[22rem] sm:min-w-[33rem] text-xl sm:text-3xl">
       <div className="flex items-center  gap-x-2"><motion.span>{displayText1}</motion.span><CursorBlinker className={ finish1 ? 'hidden' : '' }/></div>
-      { finish1 && <div className="flex items-center  gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText2}</motion.span><CursorBlinker className={ finish2 ? 'hidden' : '' }/></div> }
-      { finish2 && <div className="flex items-center gap-x-2 mt-3"><span className='text-green-300'>$ </span><motion.span>{displayText3}</motion.span><CursorBlinker className={ finish3 ? 'hidden' : '' }/></div> }
+      { finish1 && <div className="flex items-center  gap-x-2 mt-3"><span className='text-green-300'>$  </span><motion.span>{displayText2}</motion.span><CursorBlinker className={ finish2 ? 'hidden' : '' }/></div> }
+      { finish2 && <div className="flex items-center gap-x-2 mt-3"><span className='text-green-300'>$  </span><motion.span>{displayText3}</motion.span><CursorBlinker className={ finish3 ? 'hidden' : '' }/></div> }
     </div>
   );
 }

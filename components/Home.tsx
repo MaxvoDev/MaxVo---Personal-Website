@@ -31,14 +31,14 @@ const HomeComponent = () => {
     return (
         <div className='text-[#0f0] bg-zinc-900 w-full h-full flex flex-col items-center justify-center md:text-3xl'>
             <div className="grow flex flex-col items-center justify-center">
-                <div className='mb-2 w-full font-bold text-left text-xl sm:text-5xl flex items-center'>
+                <div className='mb-2 w-full font-bold text-left text-2xl sm:text-6xl flex items-center'>
                     <span className='text-[rgb(159,18,57)]'>root</span>
                     @Max_Vo:~$
                     <CursorBlinker className="ml-1 h-full w-[10px] bg-[#0f0]"></CursorBlinker>
                 </div>
                 {
                     showFull ?
-                    <div className='text-left flex flex-col gap-y-1 text-xl'>
+                    <div className='text-left flex flex-col gap-y-1'>
                         <TextAnim/>
                         {
                             isFinished &&
@@ -78,7 +78,7 @@ const HomeComponent = () => {
                     <Menu showIcon={true} isActive={projectsModal.isOpen} onClick={projectsModal.onOpen} name="Contact" image="/images/projects-icon.png"></Menu>
                     <Menu showIcon={true} isActive={skillsModal.isOpen} onClick={skillsModal.onOpen} name="Skills" image="/images/skills-icon.png"></Menu>
                     <a className="flex items-center justify-center hover:bg-[rgb(71,85,105)]" target="_blank" href="https://www.linkedin.com/in/max-vo/">
-                        <AiFillLinkedin size={50}></AiFillLinkedin>
+                        <AiFillLinkedin size={40}></AiFillLinkedin>
                     </a>
                     <Menu showIcon={true} isActive={websiteModal.isOpen} onClick={websiteModal.onOpen} name="Website" image="/images/website-icon.png"></Menu>
                     <Menu showIcon={true} isActive={contactmeModal.isOpen} onClick={contactmeModal.onOpen} name="Contact" image="/images/contact-icon.png"></Menu>
