@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CursorBlinker from "./CursorBlinker";
 import useAnimationText from "@/hooks/useAnimationText";
 
@@ -31,13 +31,15 @@ export default function TextAnim() {
   const displayText3 = useTransform(rounded3, (latest) =>
     text3.slice(0, latest)
   );
-
+  
   useEffect(() => {
     const control1 = animate(count1, text1.length, {
       type: "tween",
       duration: 2,
       ease: "easeInOut",
-      onComplete: () => setFinish1(true)
+      onComplete: () => {
+        setFinish1(true)
+      }
     });
     const control2 = animate(count2, text2.length, {
       type: "tween",

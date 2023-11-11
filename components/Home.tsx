@@ -46,7 +46,7 @@ const HomeComponent = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 3 }}
-                                className="w-full grid grid-cols-12 text-sky-300 mt-3 gap-y-5">
+                                className="w-full grid grid-cols-12 text-sky-300 mt-10 gap-y-5">
                                 <Menu className="col-span-6" onClick={userModal.onOpen} name="About"></Menu>
                                 <Menu className="col-span-6" onClick={cvModal.onOpen} name="Resume"></Menu>
                                 <Menu className="col-span-6" onClick={projectsModal.onOpen} name="Projects"></Menu>
