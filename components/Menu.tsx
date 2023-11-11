@@ -26,7 +26,9 @@ const Menu: React.FC<MenuProps> = ({
             className
         )}>
             <button className={twMerge(`
-            hover:bg-[rgb(71,85,105)]`,
+            hover:bg-[rgb(71,85,105)]
+            flex items-center justify-center
+            `,
                 isActive && `border-b-4 border-indigo-500`
             )} onClick={onClick}>
                 {
