@@ -13,7 +13,6 @@ const ContactMeModal = () => {
 
     const sendEmail = (e: any) => {
         e.preventDefault();
-        alert(1);
         emailjs.sendForm('service_uiskozm', 'template_hjg6i5a', "test", 'BPOdAfZ6eYVHV-bBk')
         .then((result: any) => {
             console.log(result.text);
