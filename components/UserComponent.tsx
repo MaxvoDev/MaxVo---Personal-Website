@@ -6,7 +6,7 @@ const UserModal = () => {
     const { isOpen, onClose } = useUserModal();
     const [dob] = useState(new Date("02/05/1995"));
 
-    const onChange = (open) => {
+    const onChange = (open: boolean) => {
         if (!open) {
             onClose();
         }
