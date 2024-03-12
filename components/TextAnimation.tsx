@@ -35,7 +35,7 @@ export default function TextAnim() {
   useEffect(() => {
     const control1 = animate(count1, text1.length, {
       type: "tween",
-      duration: 2,
+      duration: 1,
       ease: "easeInOut",
       onComplete: () => {
         setFinish1(true)
@@ -43,15 +43,15 @@ export default function TextAnim() {
     });
     const control2 = animate(count2, text2.length, {
       type: "tween",
-      duration: 2,
-      delay: 3,
+      duration: 1,
+      delay: 1,
       ease: "easeInOut",
       onComplete: () => setFinish2(true)
     });
     const control3 = animate(count3, text3.length, {
       type: "tween",
-      duration: 2,
-      delay: 6,
+      duration: 1,
+      delay: 2,
       ease: "easeInOut",
       onComplete: () => {
         setFinish3(true);
