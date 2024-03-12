@@ -27,9 +27,6 @@ const WebsiteModal = () => {
     - Next.Js<br/>
     - TailwindCSS<br/>
     - Git<br/>
-    - Google Firebase to host my static files<br/>
-    - LaTeX (to create my resume)<br/>
-    - latexonline.cc API (to compile my resume)<br/>
     - EmailJS for sending emails to myself<br/>
     - A bunch of npm packages. Feel free to contact me if you have any questions on how I developed something.</p>
             </div>

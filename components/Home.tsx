@@ -2,13 +2,13 @@
 
 import useCvModal from "@/hooks/useCvModal";
 import Menu from "./Menu";
-import useSocialModal from "@/hooks/useSocialModal";
 import useWebsiteModal from "@/hooks/useWebsiteModal";
 import useSkillsModal from "@/hooks/useSkillsModal";
 import useUserModal from "@/hooks/useUserModal";
 import useContactMeModal from "@/hooks/useContactMeModal";
 import useProjectsModal from "@/hooks/useProjectsModal";
 import {AiFillLinkedin} from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 import CursorBlinker from "./CursorBlinker";
 import { useState } from "react";
 import TextAnim from "./TextAnimation";
@@ -56,6 +56,11 @@ const HomeComponent = () => {
                                         /LinkedIn
                                     </a>
                                 </div>
+                                <div className="col-span-6">
+                                    <a className="hover:bg-[rgb(71,85,105)]" target="_blank" href="https://github.com/MaxvoDev">
+                                        /Github
+                                    </a>
+                                </div>
                                 <Menu className="col-span-6" onClick={websiteModal.onOpen} name="Website"></Menu>
                                 <Menu className="col-span-6" onClick={contactmeModal.onOpen} name="Contact"></Menu>
                             </motion.div>
@@ -73,12 +78,15 @@ const HomeComponent = () => {
                 transition={{ duration: 3 }}
                 className="p-3 flex h-[3.75rem] w-full gap-x-3 items-center justify-center bg-blue-500/[0.03] border-t border-black/[0.3]">
                     <Menu showIcon={true} name="About" image="/images/start-icon.png"></Menu>
-                    <Menu showIcon={true} isActive={userModal.isOpen} onClick={userModal.onOpen} name="Socials" image="/images/user-icon.png"></Menu>
+                    <Menu showIcon={true} isActive={userModal.isOpen} onClick={userModal.onOpen} name="User" image="/images/user-icon.png"></Menu>
                     <Menu showIcon={true} isActive={cvModal.isOpen} onClick={cvModal.onOpen} name="Website" image="/images/resume-icon.png"></Menu>
                     <Menu showIcon={true} isActive={projectsModal.isOpen} onClick={projectsModal.onOpen} name="Contact" image="/images/projects-icon.png"></Menu>
                     <Menu showIcon={true} isActive={skillsModal.isOpen} onClick={skillsModal.onOpen} name="Skills" image="/images/skills-icon.png"></Menu>
                     <a className="flex items-center justify-center hover:bg-[rgb(71,85,105)]" target="_blank" href="https://www.linkedin.com/in/max-vo/">
                         <AiFillLinkedin size={40}></AiFillLinkedin>
+                    </a>
+                    <a className="flex items-center justify-center hover:bg-[rgb(71,85,105)]" target="_blank" href="https://github.com/MaxvoDev">
+                        <FaGithub size={40}></FaGithub>
                     </a>
                     <Menu showIcon={true} isActive={websiteModal.isOpen} onClick={websiteModal.onOpen} name="Website" image="/images/website-icon.png"></Menu>
                     <Menu showIcon={true} isActive={contactmeModal.isOpen} onClick={contactmeModal.onOpen} name="Contact" image="/images/contact-icon.png"></Menu>
