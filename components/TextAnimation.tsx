@@ -59,7 +59,7 @@ export default function TextAnim() {
       }
     });
     control3.stop;
-  }, []);
+  });
 
   return (
     <div className="min-w-[22rem] sm:min-w-[33rem] text-xl sm:text-3xl">

@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import { useState } from "react";
 import { AiFillBackward } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const projectList = [
     {
@@ -154,8 +155,8 @@ const ProjectsModal = () => {
                             <p className="whitespace-pre-line">{projectList[projectID].fullDesc.description}</p>
                             <div className="flex flex-col items-center justify-center">
                                 {
-                                    projectList[projectID].fullDesc.images && projectList[projectID].fullDesc.images?.map(img => (
-                                        <img className="mt-3" src={img} alt="GUI"></img>
+                                    projectList[projectID].fullDesc.images && projectList[projectID].fullDesc.images?.map((img, index) => (
+                                        <Image key={index} className="mt-3" src={img} alt="GUI"></Image>
                                     ))
                                 }
                                 {
